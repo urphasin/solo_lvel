@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  int8_t x = 0b10001011;
+  u_int16_t x = 0b0000000010110101;
 
 
   
