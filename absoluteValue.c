@@ -1,6 +1,6 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
+#include<stdlib.h> // for abs()
+#include<math.h> // for fabs()
 
 int main() {
   printf("abs(-5) = %d\n", abs(-5));
