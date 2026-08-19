@@ -1,4 +1,6 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
 
 int main() {
   int x = 2010214;
@@ -9,4 +11,10 @@ int main() {
   x = (x & 0x0000FFFF) + ((x >> 16) & 0x0000FFFF);
 
   printf("x = %d\n", x);
+  printf("abs(-5) = %d\n", abs(-5));
+  printf("fabsf(-77.52) = %d\n", fabsf(-77.52f));
+  printf("fabs(-77.52) = %d\n", fabsf(-77.52));
+  printf("labs()")
+
+  return 0;
 }
