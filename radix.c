@@ -14,7 +14,10 @@ int main() {
 
   printf("unsigned_bit 2^16 = %lg values\n", pow(2, 16));
 
-  printf("(x << 3) | (x >> (W_fixed_bit_width - 3)) = %d\n", (x >> 3) | (x << 13) );
+  printf("x = %d\n", x);
+
+  // cast so no promotion.
+  printf("(x << 3) | (x >> (W_fixed_bit_width - 3)) = %d\n", (u_int16_t)((x >> 3) | (x << 13)) );
 
   
   return 0;
