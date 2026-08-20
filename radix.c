@@ -9,11 +9,13 @@ int main() {
 
   printf("~x + 1; = %d\n", ~x + 1);
 
+  // no assignment, just evaluation.
   printf("x << 3; = %d\n", x << 3);
   printf("x >> 3; = %d\n", x >> 3);
 
   printf("unsigned_bit 2^16 = %lg values\n", pow(2, 16));
 
+  // proof
   printf("x = %d\n", x);
 
   // cast so no promotion to int before doing operation
