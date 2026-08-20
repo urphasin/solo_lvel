@@ -16,7 +16,7 @@ int main() {
 
   printf("x = %d\n", x);
 
-  // cast so no promotion.
+  // cast so no promotion to int before doing operation
   printf("(x << 3) | (x >> (W_fixed_bit_width - 3)) = %d\n", (u_int16_t)((x >> 3) | (x << 13)) );
 
   
