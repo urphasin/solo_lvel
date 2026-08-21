@@ -3,10 +3,19 @@
 
 typedef int* IntegerPointer;
 int main() {
-  IntegerPointer A = (IntegerPointer)malloc(sizeof(int));
+  IntegerPointer A = malloc(sizeof(int));
+  *A = 50;
 
-  printf("sizeof(int) = %lu\n", sizeof(int));
-  printf("sizeof(IntegerPointer) = %lu\n", sizeof(IntegerPointer));
+  printf("sizeof(int) = %lu bytes\n", sizeof(int));
+
+  printf("sizeof(IntegerPointer) = %lu bytes\n", sizeof(IntegerPointer));
+
+  printf("*A = %d\n", *A);
+
+  printf("A = %p\n", A);
+
+  printf("&A = %p\n", &A);
+
 
   free(A);
 }
