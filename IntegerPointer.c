@@ -10,12 +10,7 @@ int main() {
 
   printf("sizeof(IntegerPointer) = %lu bytes\n", sizeof(IntegerPointer));
 
-  printf("*A = %d\n", *A);
-
-  printf("A = %p\n", A);
-
-  printf("&A = %p\n", &A);
-
+  
 
   free(A);
 }
