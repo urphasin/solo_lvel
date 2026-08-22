@@ -3,7 +3,7 @@
 
 typedef int* IntegerPointer;
 int main() {
-  IntegerPointer A = (char*)malloc(sizeof(int)); // optional to cast to IntegerPointer/int*
+  IntegerPointer A = (void*)malloc(sizeof(int)); // optional to cast to IntegerPointer/int*
   *A = 50;
 
   printf("A = %d\n", *A);
