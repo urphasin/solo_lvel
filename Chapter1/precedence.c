@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  int a = 1, b = 2, c = 3, d = 4, ans;
+  int a = 1, b = 2, c = 3, d = 4, e = 5, ans;
 
   //
   ans = a & b == c; // problem
@@ -22,5 +22,19 @@ int main() {
 
   ans = ((a * b) + c) << d; // correct
   printf("ans = ((a * b) + c) << d; = %d\n", ans);
+
+  //
+  ans = a && b | c ^ d & e; // problem
+  printf("ans = a && b | c ^ d & e;  = %d\n", ans);
+
+  ans = a && (b | (c ^ (d & e))); // correct
+  printf("ans = a && (b | (c ^ (d & e)));  = %d\n", ans);
+
+  //
+  ans = a + b > c + d && e; // problem
+  printf("ans = a + b > c + d && e;  = %d\n", ans);
+
+  ans = (((a + b) > c) == d) && e; // correct
+  printf("ans = (((a + b) > c) == d) && e;  = %d\n", ans);
   
 }
