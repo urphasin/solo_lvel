@@ -25,8 +25,8 @@ int main() {
   printf("ans = a && (b | (c ^ (d & e)));  = %d\n\n", ans);
 
   //
-  ans = a + b > c + d && e; // problem
-  printf("ans = a + b > c + d && e;  = %d\n", ans);
+  ans = a + b > c == d && e; // problem
+  printf("ans = a + b > c == d && e;  = %d\n", ans);
 
   ans = (((a + b) > c) == d) && e; // correct
   printf("ans = (((a + b) > c) == d) && e;  = %d\n\n", ans);
