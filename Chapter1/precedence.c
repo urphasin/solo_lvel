@@ -7,18 +7,12 @@ int main() {
   ans = a & b == c; // problem
   printf("ans = a & b == c;  = %d\n", ans);
 
-  ans = (a & b) == c; // wrong
-  printf("ans = (a & b) == c; = %d\n", ans);
-
   ans = a & (b == c); // correct
   printf("ans = a & (b == c); = %d\n\n", ans);
 
   //
   ans = a * b + c << d; // problem
   printf("ans = a * b + c << d; = %d\n", ans);
-
-  ans = (a * b) + (c << d); // wrong
-  printf("ans = (a * b) + (c << d); = %d\n", ans);
 
   ans = ((a * b) + c) << d; // correct
   printf("ans = ((a * b) + c) << d; = %d\n\n", ans);
@@ -36,5 +30,12 @@ int main() {
 
   ans = (((a + b) > c) == d) && e; // correct
   printf("ans = (((a + b) > c) == d) && e;  = %d\n\n", ans);
+
+  //
+  ans = a = b = c + d * e; // problem
+  printf("ans = a = b = c + d * e;  = %d\n", ans);
   
+  ans = a = (b = (c + (d * e))); // corect
+  printf("ans = a = (b = (c + (d * e)));  = %d\n\n", ans);
+
 }
