@@ -8,13 +8,11 @@
 
 const int SIZE = 20;
 
-int Union() {}
-int Intersection() {}
-int SymmetricDifference() {}
+void Union(int* A, int* B, size_t size) {}
+void Intersection(int* A, int* B, size_t size) {}
+void SymmetricDifference(int* A, int* B, size_t size) {}
 
 int main() {
   int set1[SIZE] = {1, 3, 5, 7, 9};
   int set2[SIZE] = {1, 2, 4, 6, 7, 8, 10};
-
-  
 }
