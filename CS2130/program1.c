@@ -10,23 +10,18 @@ const int SIZE = 100;
 
 void Union(int *A, int *B, size_t size) {
   int r[size];
+  
   for (int i = 0; i < size; i++) {
-
     r[i] = A[i];
-
-    for (int j = 0; j < size; j++) {
-
-      for (int k = 0; k < size; k++) {
-        if (B[k] = r[j]) {
-          continue;
-        }
-
-      }
-
-    }
-
   }
 
+  for (int j = 0; j < size; j++) {
+    for (int k = 0; k < size; k++) {
+      if (r[k] == B[j]) {
+        break;
+      }
+    }
+  }
 }
 void Intersection(int *A, int *B, size_t size) {}
 void SymmetricDifference(int *A, int *B, size_t size) {}
