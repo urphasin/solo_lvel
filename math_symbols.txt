@@ -1,0 +1,78 @@
+🔹 Arithmetic & Algebra
++   −   ×   ÷   ±   ∓   √   ∛   ∜
+=   ≠   ≡   ≢   ≈   ∼   ∝   ∞
+<   >   ≤   ≥
+
+
+🔹 Set theory
+∈   ∉   ⊂   ⊃   ⊆   ⊇   ⊄   ∅
+∪   ∩   ⊖   ⊆   ⊇
+ℕ   ℤ   ℚ   ℝ   ℂ
+
+
+🔹 Logic
+¬   ∧   ∨   ⇒   ⇔   ⊢   ⊨
+∀   ∃   ∄
+
+
+🔹 Linear Algebra
+·   ×   ⊗   ⊕
+‖v‖   ⟨u,v⟩   det(A)
+
+
+
+🔹 Calculus
+∂   ∇   ∫   ∬   ∭   ∮   d
+lim   →   ↦
+
+
+
+🔹 Probability
+P(A)   E[X]   Var(X)   σ   μ
+∑   ∏
+
+
+🔹 Number Theory
+mod   ≡   gcd   lcm   ∣   ∤   ⌊x⌋   ⌈x⌉
+
+
+
+🔹 Arrows (for mappings, limits, etc.)
+→   ←   ⇒   ⇐   ↔   ⇔
+↦   ↣   ↠   ↩   ↪
+↑   ↓   ⇑   ⇓
+
+
+🔹 Greek Letters
+
+Lowercase:
+α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ σ τ υ φ χ ψ ω
+
+
+Uppercase:
+Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω
+
+Special forms:
+ϵ (epsilon variant)   ϑ (theta variant)   ς (final sigma)
+ϕ (phi variant)       ϰ (kappa variant)
+
+
+
+🔹 Example usage in C++ comments
+// ∀ x ∈ ℝ, f(x) ≥ 0
+// E[X] = μ, Var(X) = σ²
+// A ⊂ B ⇒ |A| ≤ |B|
+// lim (n→∞) (1 + 1/n)^n = e
+
+
+// Summation:
+// ∑ (i=1 to n) i = n(n+1)/2
+// ∑ (k=0 to ∞) r^k = 1 / (1 - r), for |r| < 1
+
+// Product of series:
+// ∏ (i=1 to n) i = n!
+// ∏ (p prime ≤ n) p ≈ e^n   (rough heuristic)
+// Example: ∏ (i=1 to n) (1 + x_i)
+
+// ∑_{i=1}^n i^2 = n(n+1)(2n+1)/6
+// ∏_{k=1}^n (1/k) = 1/n!
