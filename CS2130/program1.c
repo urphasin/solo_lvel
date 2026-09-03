@@ -18,7 +18,7 @@ void Union(int *A, int *B, size_t size) {
   for (int j = 0; j < size; j++) {
     for (int k = 0; k < size; k++) {
       if (r[k] == B[j]) {
-        break;
+        continue;
       }
     }
   }
