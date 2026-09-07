@@ -35,13 +35,13 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   
   for (int i = 0; i < sizeA; i++) {
     if(!contains(A[i], r, resultSize)) {
-      r[resultSize] = A[i];
+      r[resultSize++] = A[i];
     }
   }
 
   for (int i = 0; i < resultSize; i++) {
     if(!contains(B[i], r, resultSize)) {
-      r[resultSize] = B[i];
+      r[resultSize++] = B[i];
     } 
   }
 
@@ -58,4 +58,6 @@ int main() {
   // set_intersection(set1, set2, SIZE);
   // set_symmetric_difference(set1, set2, SIZE);
 
+  printf("\n\x1b[1;94motito\x1b[0m\n");
+  
 }
