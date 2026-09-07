@@ -7,8 +7,6 @@
 // A ∩ B
 // A - B
 
-// Constraint of max size of 1000 elements in each array.
-const int SIZE = 1000;
 
 // utitlities
 bool contains(int target, const int arr[], int size) {
@@ -49,19 +47,21 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
 
   print_array(r, resultSize);
 }
-void set_intersection(int *A, int *B, size_t size) {
+void set_intersection(int *A, size_t sizeA, int *B, size_t sizeB) {
 
 }
-void set_symmetric_difference(int *A, int *B, size_t size) {}
+void set_symmetric_difference(int *A, size_t sizeA, int *B, size_t sizeB) {}
 
 int main() {
-  int set1[SIZE] = { 1, 3, 5, 7, 9 };
-  int set2[SIZE] = { 1, 2, 4, 6, 7, 8, 10 };
-
-  set_union(set1, SIZE, set2, SIZE);
-  // set_intersection(set1, set2, SIZE);
-  // set_symmetric_difference(set1, set2, SIZE);
-
-  printf("\n\x1b[1;94motito\x1b[0m\n");
+  // Constraint of max size of 1000 elements in each array.
+  const int sizeA = 1000, sizeB = 1000;
   
+  int set1[sizeA] = { 1, 3, 5, 7, 9 };
+  int set2[sizeB] = { 1, 2, 4, 6, 7, 8, 10 };
+
+  set_union(set1, sizeA, set2, sizeB);
+  // set_intersection(set1, sizeA, set2, sizeB);
+  // set_symmetric_difference(set1, sizeA, set2, sizeB);
+
+  // printf("\n\x1b[1;94motito\x1b[0m\n");
 }
