@@ -39,7 +39,6 @@ int* set_union(const int *A, size_t sizeA, const int *B, size_t sizeB,
                size_t* resultSize) 
 {
   
-  printf("set_union: ");
   
   *resultSize = 0;
   int *r = malloc((sizeA + sizeB) * sizeof(int));
@@ -59,10 +58,10 @@ int* set_union(const int *A, size_t sizeA, const int *B, size_t sizeB,
   return r;
 }
 
+
 int* set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB, 
                       size_t* resultSize) 
 {
-  printf("set_intersection: ");
   int bufferSize = 0;
   int b[100];
 
@@ -89,24 +88,28 @@ int* set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t s
 {
   printf("set_symmetric_difference: ");
 
-  int *ab_union;
-  int ab_union_sz = 0;
+  size_t ab_union_sz = 0;
+  int *ab_union = set_union(A, sizeA, B, sizeB, &ab_union_sz);
 
 
 
-  int *ab_intersection; 
-  int ab_intersection_sz = 0;
+  size_t ab_intersection_sz = 0;
+  int *ab_intersection = set_intersection(A, sizeA, B, sizeB, &ab_intersection_sz);
 
   *resultSize = 0;
-  int r[100];
+  int *r = malloc((sizeA + sizeB) * sizeof(int));
+
   for (int i = 0; i < ab_union_sz; i++) {
     if (!contains(ab_union[i], ab_intersection, ab_intersection_sz)) {
-      r[*(resultSize)++] = ab_union[i];
+      r[(*resultSize)++] = ab_union[i];
     }
   }
-  print_array(r, resultSize);
-}
 
+  free(ab_union);
+  free(ab_intersection);
+
+  return r;
+}
 
 
 int main() {
@@ -114,18 +117,22 @@ int main() {
   int set2[sizeB] = { 2, 3, 4, 7, 9 };
 
   size_t resultSize;
-  int *R1 = set_union(set1, sizeA, set2, sizeB, &resultSize);
-  print_array(R1, resultSize);
-  free(R1);
+
+  // int *R1 = set_union(set1, sizeA, set2, sizeB, &resultSize);
+  // print_array(R1, resultSize);
+  // free(R1);
 
   // int *R2 = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
-  // print_array(set_intersection, resultSize);
+  // print_array(R2, resultSize);
   // free(R2);
 
 
-  // int *R3 = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
-  // print_array(R3, resultSize);
+  int *R3 = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
+  print_array(R3, resultSize);
+  free(R3);
 
 
   // printf("\n\x1b[1;94motito\x1b[0m\n");
 }
+
+
