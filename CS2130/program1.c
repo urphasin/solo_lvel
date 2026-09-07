@@ -42,7 +42,7 @@ int* set_union(const int *A, size_t sizeA, const int *B, size_t sizeB,
   printf("set_union: ");
   
   *resultSize = 0;
-  int r[100];
+  int *r = malloc((sizeA + sizeB) * sizeof(int));
   
   for (int i = 0; i < sizeA; i++) {
     if(!contains(A[i], r, *resultSize)) {
@@ -67,7 +67,7 @@ int* set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB,
   int b[100];
 
   *resultSize = 0;
-  int r[100];
+  int *r = malloc((sizeA + sizeB) * sizeof(int));
 
   for (int i = 0; i < sizeA; i++) {
     if (!contains(A[i], b, bufferSize)) {
@@ -114,14 +114,16 @@ int main() {
   int set2[sizeB] = { 2, 3, 4, 7, 9 };
 
   int resultSize;
-  int R1[] = set_union(set1, sizeA, set2, sizeB, &resultSize);
+  int *R1 = set_union(set1, sizeA, set2, sizeB, &resultSize);
   print_array(R1, resultSize);
+  free(R1);
 
-  // int R2[] = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
+  // int *R2 = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
   // print_array(set_intersection, resultSize);
+  // free(R2);
 
 
-  // int R3[] = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
+  // int *R3 = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
   // print_array(R3, resultSize);
 
 
