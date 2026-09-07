@@ -53,12 +53,14 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
 }
 void set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   printf("set_intersection: ");
+  int bufferSize = 0;
+  int buffer[2000];
+
+  int resultSize = 0;
+  int r[2000];
 }
 void set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   printf("set_symmetric_difference: ");
-  int resultSize = 0;
-  int r[2000];
-
 
 }
 
