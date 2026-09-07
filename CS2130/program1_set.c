@@ -134,7 +134,7 @@ int main() {
   free(R3);
 
 
-  // printf("\n\x1b[1;94motito\x1b[0m\n");
+  printf("\n\x1b[1;94motito amuga\x1b[0m\n");
 }
 
 
