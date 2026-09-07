@@ -51,14 +51,32 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
 
   print_array(r, resultSize);
 }
+
 void set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   printf("set_intersection: ");
   int bufferSize = 0;
-  int buffer[2000];
+  int b[2000];
 
   int resultSize = 0;
   int r[2000];
+
+  for (int i = 0; i < sizeA; i++) {
+    if (!contains(A[i], b, bufferSize)) {
+      b[bufferSize++] = A[i];
+    }
+  }
+
+  int intersection_exists = 0;
+  for (int i = 0; i < sizeB; i++) {
+    if(contains(B[i], b, bufferSize)) {
+      r[resultSize++] = B[i];
+      intersection_exists++;
+    }
+  }
+
+  print_array(r, intersection_exists);
 }
+
 void set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   printf("set_symmetric_difference: ");
 
