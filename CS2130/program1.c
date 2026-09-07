@@ -7,6 +7,7 @@
 // A ∩ B
 // A - B
 
+// Constraint of max size of 1000 elements in each array.
 const int SIZE = 1000;
 
 // utitlities
@@ -32,7 +33,7 @@ void print_array(const int* arr, size_t size) {
 
 void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   int resultSize = 0;
-  int r[1000];
+  int r[2000];
   
   for (int i = 0; i < sizeA; i++) {
     if(!contains(A[i], r, resultSize)) {
@@ -48,7 +49,9 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
 
   print_array(r, resultSize);
 }
-void set_intersection(int *A, int *B, size_t size) {}
+void set_intersection(int *A, int *B, size_t size) {
+
+}
 void set_symmetric_difference(int *A, int *B, size_t size) {}
 
 int main() {
