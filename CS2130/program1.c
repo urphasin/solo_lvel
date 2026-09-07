@@ -23,8 +23,9 @@ void print_array(const int* arr, size_t size) {
   for (int i = 0; i < size; i++) {
     if (i != size - 1) {
       printf("%d, ", arr[i]);
+    } else {
+      printf("%d", arr[i]);
     }
-    printf("%d", arr[i]);
   }
   printf("\n");
 }
