@@ -46,13 +46,13 @@ int* set_union(const int *A, size_t sizeA, const int *B, size_t sizeB,
   
   for (int i = 0; i < sizeA; i++) {
     if(!contains(A[i], r, *resultSize)) {
-      r[*(resultSize)++] = A[i];
+      r[(*resultSize)++] = A[i];
     }
   }
 
-  for (int i = 0; i < *resultSize; i++) {
+  for (int i = 0; i < sizeB; i++) {
     if(!contains(B[i], r, *resultSize)) {
-      r[*(resultSize)++] = B[i];
+      r[(*resultSize)++] = B[i];
     } 
   }
 
@@ -77,7 +77,7 @@ int* set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB,
 
   for (int i = 0; i < bufferSize; i++) {
     if(contains(B[i], b, bufferSize)) {
-      r[*(resultSize)++] = B[i];
+      r[(*resultSize)++] = B[i];
     }
   }
 
@@ -114,14 +114,14 @@ int main() {
   int set2[sizeB] = { 2, 3, 4, 7, 9 };
 
   int resultSize;
-  int R1[] = set_union(set1, sizeA, set2, sizeB, resultSize);
+  int R1[] = set_union(set1, sizeA, set2, sizeB, &resultSize);
   print_array(R1, resultSize);
 
-  int R2[] = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
-  print_array(set_intersection, resultSize);
+  // int R2[] = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
+  // print_array(set_intersection, resultSize);
 
 
-  // int R3[] = set_symmetric_difference(set1, sizeA, set2, sizeB);
+  // int R3[] = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
   // print_array(R3, resultSize);
 
 
