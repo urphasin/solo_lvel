@@ -118,13 +118,15 @@ int main() {
 
   size_t resultSize;
 
-  // int *R1 = set_union(set1, sizeA, set2, sizeB, &resultSize);
-  // print_array(R1, resultSize);
-  // free(R1);
+  int *R1 = set_union(set1, sizeA, set2, sizeB, &resultSize);
+  printf("set_union: ");
+  print_array(R1, resultSize);
+  free(R1);
 
-  // int *R2 = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
-  // print_array(R2, resultSize);
-  // free(R2);
+  int *R2 = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
+  printf("set_intersection: ");
+  print_array(R2, resultSize);
+  free(R2);
 
 
   int *R3 = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
