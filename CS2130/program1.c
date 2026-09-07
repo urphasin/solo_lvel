@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// Constraint of max size of 1000 elements in each array.
-
+// constraint of size of 1000 elements in each array.
 enum {
   sizeA = 1000,
   sizeB = 1000
@@ -57,6 +56,10 @@ void set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB) {
 }
 void set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB) {
   printf("set_symmetric_difference: ");
+  int resultSize = 0;
+  int r[2000];
+
+
 }
 
 
