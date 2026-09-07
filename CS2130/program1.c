@@ -62,8 +62,8 @@ int main() {
   int set1[sizeA] = { 1, 3, 5, 6, 8 };
   int set2[sizeB] = { 2, 3, 4, 7, 9 };
 
-  // set_union(set1, sizeA, set2, sizeB);
-  set_intersection(set1, sizeA, set2, sizeB);
+  set_union(set1, sizeA, set2, sizeB);
+  // set_intersection(set1, sizeA, set2, sizeB);
   // set_symmetric_difference(set1, sizeA, set2, sizeB);
 
   // printf("\n\x1b[1;94motito\x1b[0m\n");
