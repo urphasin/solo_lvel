@@ -86,8 +86,6 @@ int* set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB,
 int* set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB, 
                               size_t* resultSize) 
 {
-  printf("set_symmetric_difference: ");
-
   size_t ab_union_sz = 0;
   int *ab_union = set_union(A, sizeA, B, sizeB, &ab_union_sz);
 
@@ -130,6 +128,7 @@ int main() {
 
 
   int *R3 = set_symmetric_difference(set1, sizeA, set2, sizeB, &resultSize);
+  printf("set_intersection: ");
   print_array(R3, resultSize);
   free(R3);
 
