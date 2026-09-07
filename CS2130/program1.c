@@ -39,7 +39,7 @@ void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
     }
   }
 
-  for (int i = 0; j < resultSize; j++) {
+  for (int i = 0; i < resultSize; i++) {
     if(!contains(B[i], r, resultSize)) {
       r[resultSize] = B[i];
     } 
