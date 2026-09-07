@@ -3,10 +3,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// constraint of size of 1000 elements in each array.
+/*constraint of size elements in each array, the algorithms breaks if the number of elements
+instantiated is less than the capacity of the array.
+the number of elements that are in it.
+*/
 enum {
-  sizeA = 1000,
-  sizeB = 1000
+  sizeA = 5,
+  sizeB = 5
 };
 
 // utitlities
@@ -32,33 +35,39 @@ void print_array(const int* arr, size_t size) {
 
 
 // program requirement
-void set_union(const int *A, size_t sizeA, const int *B, size_t sizeB) {
+int* set_union(const int *A, size_t sizeA, const int *B, size_t sizeB,
+               size_t* resultSize) 
+{
+  
   printf("set_union: ");
-  int resultSize = 0;
-  int r[2000];
+  
+  *resultSize = 0;
+  int r[100];
   
   for (int i = 0; i < sizeA; i++) {
-    if(!contains(A[i], r, resultSize)) {
-      r[resultSize++] = A[i];
+    if(!contains(A[i], r, *resultSize)) {
+      r[*(resultSize)++] = A[i];
     }
   }
 
-  for (int i = 0; i < resultSize; i++) {
-    if(!contains(B[i], r, resultSize)) {
-      r[resultSize++] = B[i];
+  for (int i = 0; i < *resultSize; i++) {
+    if(!contains(B[i], r, *resultSize)) {
+      r[*(resultSize)++] = B[i];
     } 
   }
 
-  print_array(r, resultSize);
+  return r;
 }
 
-void set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB) {
+int* set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB, 
+                      size_t* resultSize) 
+{
   printf("set_intersection: ");
   int bufferSize = 0;
-  int b[2000];
+  int b[100];
 
-  int resultSize = 0;
-  int r[2000];
+  *resultSize = 0;
+  int r[100];
 
   for (int i = 0; i < sizeA; i++) {
     if (!contains(A[i], b, bufferSize)) {
@@ -66,20 +75,36 @@ void set_intersection(const int *A, size_t sizeA, const int *B, size_t sizeB) {
     }
   }
 
-  int intersection_exists = 0;
-  for (int i = 0; i < sizeB; i++) {
+  for (int i = 0; i < bufferSize; i++) {
     if(contains(B[i], b, bufferSize)) {
-      r[resultSize++] = B[i];
-      intersection_exists++;
+      r[*(resultSize)++] = B[i];
     }
   }
 
-  print_array(r, intersection_exists);
+  return r;
 }
 
-void set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB) {
+int* set_symmetric_difference(const int *A, size_t sizeA, const int *B, size_t sizeB, 
+                              size_t* resultSize) 
+{
   printf("set_symmetric_difference: ");
 
+  int *ab_union;
+  int ab_union_sz = 0;
+
+
+
+  int *ab_intersection; 
+  int ab_intersection_sz = 0;
+
+  *resultSize = 0;
+  int r[100];
+  for (int i = 0; i < ab_union_sz; i++) {
+    if (!contains(ab_union[i], ab_intersection, ab_intersection_sz)) {
+      r[*(resultSize)++] = ab_union[i];
+    }
+  }
+  print_array(r, resultSize);
 }
 
 
@@ -88,9 +113,17 @@ int main() {
   int set1[sizeA] = { 1, 3, 5, 6, 8 };
   int set2[sizeB] = { 2, 3, 4, 7, 9 };
 
-  // set_union(set1, sizeA, set2, sizeB);
-  set_intersection(set1, sizeA, set2, sizeB);
-  // set_symmetric_difference(set1, sizeA, set2, sizeB);
+  int resultSize;
+  int R1[] = set_union(set1, sizeA, set2, sizeB, resultSize);
+  print_array(R1, resultSize);
+
+  int R2[] = set_intersection(set1, sizeA, set2, sizeB, &resultSize);
+  print_array(set_intersection, resultSize);
+
+
+  // int R3[] = set_symmetric_difference(set1, sizeA, set2, sizeB);
+  // print_array(R3, resultSize);
+
 
   // printf("\n\x1b[1;94motito\x1b[0m\n");
 }
