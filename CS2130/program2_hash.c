@@ -20,4 +20,6 @@ void hash(char sentence[]) {
 int main() {
   char sentence[] = "abc";
   hash(sentence);
+
+  printf("\n\x1b[1;94motito amuga\x1b[0m\n");
 }

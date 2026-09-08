@@ -31,4 +31,6 @@ void print(char *sq) {
 int main() {
 	char *sq = "ab";
 	print(sq);
+
+  printf("\n\x1b[1;94motito amuga\x1b[0m\n");
 }
