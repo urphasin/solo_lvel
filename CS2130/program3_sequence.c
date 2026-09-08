@@ -18,8 +18,14 @@ void print(char *sq) {
 	char y = sq[1];
 
 	for (int i = 4; i > 0; i--) {
-		
+		for(int j = i; j > 0; j--) {
+			printf("%c",x);
+		}
+		for(int k = i; k > 0; k--) {
+			printf("%c",y);
+		}
 	}
+	printf("\n");
 }
 
 int main() {
