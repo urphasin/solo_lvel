@@ -24,6 +24,6 @@ void print_binary_16(u_int16_t val) {
 
 int main() {
 
-  u_int16_t a = 21607;
+  u_int16_t a = 40'000;
   print_binary_16(a);
 }
