@@ -17,19 +17,18 @@ long long nPr(double n, double r) {
 }
 
 long long nCr(double n, double r) {
-  if (r > n || r < 0 || n < 0) {
-    return 0;
+  ll res = nPr(n, r);
+
+  ll rfactorial = 1;
+  for(int i = r; i >= 1; i--) {
+    rfactorial *= i;
   }
 
-  long long result = 1;
-  for (int i = 0, j = r; i < r; i++, j--) {
-    result *= (n - i) / j;
-  }
-  return result;
+  return res/rfactorial;
 }
 
 int main() {
-  cout << "nCr(5, 2) = " << nCr(5, 1) << endl;
+  cout << "nCr(5, 2) = " << nCr(5, 2) << endl;
   // subsets of 5 element set ⊆ {A, B, C, D, E};
   ll res = 0;
   for(int i = 0; i <= 5; i++) {
