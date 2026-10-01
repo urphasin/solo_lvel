@@ -29,12 +29,13 @@ long long nCr(double n, double r) {
 }
 
 int main() {
+  cout << "nCr(5, 2) = " << nCr(5, 1) << endl;
   // subsets of 5 element set ⊆ {A, B, C, D, E};
   ll res = 0;
   for(int i = 0; i <= 5; i++) {
     res += nCr(5, i);
   }
-  cout << res << endl;
+  cout  << "subsets of 5 element set is : " << res << endl;
 }
 
 // g++ subsets.cpp -o ans && ./ans && rm -rf ./ans 
