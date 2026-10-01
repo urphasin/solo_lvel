@@ -11,8 +11,14 @@ Watch output, it needs to be correct for base 16.
 */
 
 
-void print_base_8(int val) {
-
+void print_base_8(int num) {
+  char* s = "";
+  while(num > 0) {
+    int rem = num % 8;
+    s = (char)(rem + '0') + s;
+    num /= 8;
+  }
+  
 }
 
 
