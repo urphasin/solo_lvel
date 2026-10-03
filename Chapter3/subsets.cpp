@@ -28,15 +28,8 @@ long long nCr(double n, double r) {
 }
 
 int main() {
-  cout << "nCr(5, 2) = " << nCr(5, 2) << endl;
 
-  // subsets of 5 element set ⊆ {A, B, C, D, E};
-  ll res = 0;
-  int n = 50;
-  for(int i = 0; i <= n; i++) {
-    res += nPr(n, i);
-  }
-  cout  << "subsets of " << n << " element set is : " << res << endl;
+
 }
 
 // g++ subsets.cpp -o ans && ./ans && rm -rf ./ans 
