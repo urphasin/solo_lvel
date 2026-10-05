@@ -15,8 +15,10 @@ int main() {
       cin >> grid[i];
       cout << grid[i] << endl;
     }
+    // Start algorithm
 
 
+    // End algorithm
     cin >> n >> m;
   }
 
