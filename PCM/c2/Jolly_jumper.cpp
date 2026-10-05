@@ -8,5 +8,20 @@ using namespace std;
 
 
 int main() {
+  // input parsing
+  int n;
+
+  while (cin >> n) {
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) {
+      cin >> a[i];
+    }
+    // start algorithm
+
+
+    // end algorithm
+  }
+
   
+  return 0;
 }
