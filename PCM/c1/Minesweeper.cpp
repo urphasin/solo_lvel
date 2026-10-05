@@ -11,6 +11,9 @@ int main() {
   cin >> n >> m;
   while(n!= 0 && m!= 0) {
     
+    for (int i = 0; i < n; i++) {
+      
+    }
 
 
     cin >> n >> m;
