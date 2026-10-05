@@ -28,8 +28,7 @@ long long nCr(double n, double r) {
 }
 
 int main() {
-
-
+  
 }
 
 // g++ subsets.cpp -o ans && ./ans && rm -rf ./ans 
