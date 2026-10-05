@@ -7,6 +7,7 @@ using namespace std;
 
 
 int main() {
+  // start input parsing
   int m, n;
   cin >> n >> m;
   while(n!= 0 && m!= 0) {
@@ -15,6 +16,8 @@ int main() {
       cin >> grid[i];
       cout << grid[i] << endl;
     }
+    //end input parsing
+    // ----------------------
     // Start algorithm
 
 
