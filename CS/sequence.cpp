@@ -7,15 +7,20 @@ using namespace std;
 
 
 int main() {
-  
-  for (int n = 1; n <= 20; n++) {
-    int ans = 8 * ((n - 1) % 2);
-
-    cout << ans;
+  // seq 1
+  int An = 7;
+  for (int n = 1; n <= 10; n++) {
+    cout << An;
+    
+    An += 8 * ((n) % 2);
     if (n != 20) {
       cout << ","; 
     }
   }
+
+  // seq 2
+  An = 2;
+  for()
 
 
   cout << endl;
