@@ -9,10 +9,12 @@ using namespace std;
 int main() {
   
   for (int n = 1; n < 21; n++) {
-    int ans = 0;
+    int ans = 8 * ((n - 1) % 2);
 
     cout << ans << ", "; 
   }
+
+
   cout << endl;
-  
+  return 0;
 }
