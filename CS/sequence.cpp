@@ -8,13 +8,18 @@ using namespace std;
 
 int main() {
   
-  for (int n = 1; n < 21; n++) {
+  for (int n = 1; n <= 20; n++) {
     int ans = 8 * ((n - 1) % 2);
 
-    cout << ans << ", "; 
+    cout << ans;
+    if (n != 20) {
+      cout << ","; 
+    }
   }
 
 
   cout << endl;
   return 0;
 }
+
+// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
