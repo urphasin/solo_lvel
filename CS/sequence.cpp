@@ -21,8 +21,20 @@ int main() {
   // seq 2
   An = 2;
   for(int n = 1; n <= 10; n++) {
-    
+
   }
+
+  // seq 3
+  int An = 7;
+  for (int n = 1; n <= 10; n++) {
+    cout << An;
+
+    An += 8 * ((n) % 2) + 1;
+    if (n != 20) {
+      cout << ",";
+    }
+  }
+
 
 
   cout << endl;
