@@ -18,11 +18,16 @@ int main() {
     }
   }
 
+  cout << endl;
+
   // seq 2
   An = 2;
   for(int n = 1; n <= 10; n++) {
 
   }
+
+  cout << endl;
+
 
   // seq 3
   An = 7;
