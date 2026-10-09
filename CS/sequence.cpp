@@ -25,7 +25,7 @@ int main() {
   }
 
   // seq 3
-  int An = 7;
+  An = 7;
   for (int n = 1; n <= 10; n++) {
     cout << An;
 
