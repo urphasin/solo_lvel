@@ -12,13 +12,8 @@ void sol1(int n) {
     }
     
     for(int k = 0; k < i; k++) {
-      cout << "*";
+      cout << "* ";
     }
-
-    for (int l = 1; l <= (n - i); l++) {
-      cout << " ";
-    }
-
     cout << endl;
   }
 }
