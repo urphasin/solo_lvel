@@ -3,6 +3,17 @@ using namespace std;
 
 #define ll long long
 
+
+/*
+Print out the truth table for the following proposition using the variables a, b, c, d, e.
+The output should contain the header and 32 more lines for the table.
+You should use capital a (A) for AND, and capital v (V) for OR in the output.
+
+Proposition:
+(( c V ~d ) A b ) A ~( d V a A e )
+*/
+
+
 void solve() {
   
 }

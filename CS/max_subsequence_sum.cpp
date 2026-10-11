@@ -8,7 +8,7 @@ using namespace std;
 
 
 void sol1() {
-
+  vector<int> a{1, 4, 9, 5, 3, 1, 15};
 }
 
 int main() {

@@ -8,16 +8,15 @@ using namespace std;
 
 
 void solve() {
-  vector<int> v {1, 2, 3, 4, 5, 1};
+  vector<int> v {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   for(int i = 0; i < v.size(); i++) {
-    for(int j = i+1; j < v.size(); j++) {
-      for (int k = i; k < v.size(); k++) {
-        cout << j << ",";
-      }
+    for (int j = i; j < v.size(); j++) {
+      cout << v[j] << ",";
       cout << endl;
     }
   }
+
 }
 
 int main() {
