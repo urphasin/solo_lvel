@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-struct 
+struct ListNode {};
 
 void sol1() {
 
