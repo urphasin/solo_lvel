@@ -3,9 +3,13 @@ using namespace std;
 
 #define ll long long
 
-
-
-
+void print_matrix(vector<vector<int>> M) {
+  for (int i = 0; i < M.size(); i++) {
+    for (int j = 0; j < M[i].size(); j++) {
+      cout << M[i][j] << ", " << endl; 
+    }
+  }
+}
 
 void sol1() {
 
