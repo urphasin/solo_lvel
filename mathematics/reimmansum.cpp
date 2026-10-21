@@ -4,16 +4,16 @@ using namespace std;
 #define ll long long
 
 
-
-
-
-void sol1() {
+void reimann_sum() {
+  //y = x^2
   int a = 1, b = 4;
 
-  int inf = 100'000;
-  double dx = (b-a)/inf;
+  int inf = 100'000'000;
+  double dx = static_cast<double>(b - a)/inf;
 
-  double ax = dx;
+  cout << "dx = " << dx << endl;
+
+  double ax = 1;
   double sum = 0;
   int y = 1;
 
@@ -32,7 +32,7 @@ int main() {
   
   int t = 1;
   // cin >> t;
-  while(t--) sol1();
+  while(t--) reimann_sum();
 
   cout << endl;
   return 0;
