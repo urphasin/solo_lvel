@@ -18,10 +18,21 @@ void sol1() {
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
-  
   int t = 1;
   // cin >> t;
-  while(t--) sol1();
+  
+  while (t--) { 
+    sol1();
+
+    vector<vector<int>> M = {
+      {0, 1, 0},
+      {0, 0, 1},
+      {0, 0, 0}
+    };
+
+    print_matrix(M);
+
+  }
 
   cout << endl;
   return 0;
