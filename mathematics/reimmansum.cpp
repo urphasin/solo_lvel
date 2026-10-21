@@ -15,7 +15,6 @@ void reimann_sum() {
 
   double ax = 1;
   double sum = 0;
-  int y = 1;
 
   for(int i = 0; i < inf; i++) {
     double area = dx * (ax * ax);
