@@ -14,7 +14,13 @@ void sol1(year_month_day start, year_month_day end) {
 
   // Convert dates into a day_based timeline
   sys_days start_days = start;
-  sys_days end_days   = end;
+  sys_days end_days = end;
+
+  // Calculate difference
+  auto difference = end_days - start_days;
+
+  cout << "Days between dates: " 
+    << difference.count() << "\n";
 }
 
 int main() {
@@ -32,16 +38,16 @@ int main() {
     cin >> y2 >> m2 >> d2;
     cout << "\n\n";
 
-    chrono::year_month_day start {
-      year{y1}, 
-      month{static_cast<unsigned>(m1)}, 
-      day{static_cast<unsigned>(d1)}
+    chrono::year_month_day start{
+      year{ y1 },
+      month{ static_cast<unsigned>(m1) },
+      day{ static_cast<unsigned>(d1) }
     };
 
-    chrono::year_month_day end {
-      year{y2},
-      month{static_cast<unsigned>(m2)},
-      day{static_cast<unsigned>(d2)}
+    chrono::year_month_day end{
+      year{ y2 },
+      month{ static_cast<unsigned>(m2) },
+      day{ static_cast<unsigned>(d2) }
     };
 
     sol1(start, end);
