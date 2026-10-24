@@ -13,7 +13,8 @@ void sol1(year_month_day start, year_month_day end) {
   }
 
   // Convert dates into a day_based timeline
-
+  sys_days start_days = start;
+  sys_days end_days   = end;
 }
 
 int main() {
