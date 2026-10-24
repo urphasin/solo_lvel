@@ -5,7 +5,7 @@ using namespace std::chrono;
 
 #define ll long long
 
-void sol1(year_month_day start, year_month_day end) {
+void sol1(year_month_day& start, year_month_day& end) {
   // Validate date
   if (!start.ok() || !end.ok()) {
     cout << "Bad Date" << "\n";
@@ -58,4 +58,4 @@ int main() {
 
 }
 
-// g++ range.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ -std=c++20 range.cpp -o ans && ./ans && rm -rf ./ans 
