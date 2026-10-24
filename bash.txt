@@ -1,0 +1,8 @@
+// check c++ compiler std
+echo | clang++ -dM -E -x c++ - | grep __cplusplus
+
+// persistent alias
+nano ~/.zshrc
+alias clang++="clang++ -std=c++20" <- bottom or top
+
+
