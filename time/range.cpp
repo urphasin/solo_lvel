@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <chrono>
 
 using namespace std;
 using namespace std::chrono;
@@ -12,6 +11,9 @@ void sol1(year_month_day start, year_month_day end) {
     cout << "Bad Date" << "\n";
     return;
   }
+
+  // Convert dates into a day_based timeline
+
 }
 
 int main() {
