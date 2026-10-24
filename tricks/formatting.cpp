@@ -162,4 +162,4 @@ int main() {
   return 0;
 }
 
-// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ formatting.cpp -o ans && ./ans && rm -rf ./ans 
