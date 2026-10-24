@@ -5,6 +5,10 @@ echo | clang++ -dM -E -x c++ - | grep __cplusplus
 nano ~/.zshrc
 alias clang++="clang++ -std=c++20" <- bottom or top
 
-// kill a process
+// kill a process(2 ways)
+ctrl+c
+
 ctrl + z
 kill %1
+
+//
