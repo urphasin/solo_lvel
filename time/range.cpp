@@ -49,4 +49,4 @@ int main() {
 
 }
 
-// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ range.cpp -o ans && ./ans && rm -rf ./ans 
