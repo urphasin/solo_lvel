@@ -7,7 +7,11 @@ using namespace std::chrono;
 #define ll long long
 
 void sol1(year_month_day start, year_month_day end) {
-
+  // Validate date
+  if (!start.ok() || !end.ok()) {
+    cout << "Bad Date" << "\n";
+    return;
+  }
 }
 
 int main() {
