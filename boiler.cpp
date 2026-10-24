@@ -17,7 +17,9 @@ int main() {
   
   int t = 1;
   // cin >> t;
-  while(t--) sol1();
+  while(t--){
+    sol1();
+  }
 
   cout << endl;
   return 0;
