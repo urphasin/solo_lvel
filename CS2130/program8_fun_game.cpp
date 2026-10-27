@@ -6,14 +6,14 @@ using namespace std;
 
 
 void sol1() {
-
+  
 }
 
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   
-  int t = 1;
+  int t = 10;
   // cin >> t;
   while(t--){
     sol1();
@@ -24,4 +24,4 @@ int main() {
   
 }
 
-// g++ 0.cpp -o ans && ./ans && rm -rf ./ans 
+// g++ program8_fun_game.cpp -o ans && ./ans && rm -rf ./ans 
