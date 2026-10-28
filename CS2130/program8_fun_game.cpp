@@ -6,7 +6,10 @@ using namespace std;
 
 
 void sol1() {
- 
+  random_device rd;
+  mt19937 gen(rd());
+
+  
 }
 
 int main() {
