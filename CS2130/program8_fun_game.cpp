@@ -9,17 +9,21 @@ void sol1() {
   random_device rd;
   mt19937 gen(rd());
 
+  unsigned int seed = rd();
   
+  cout << "Seed: " << seed << "\n";
+  cout << "Gen:  " << gen() << "\n";
 }
 
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   
-  int t = 1;
+  int t = 5;
   // cin >> t;
   while(t--){
     sol1();
+    cout << "\n";
   }
 
   cout << endl;
