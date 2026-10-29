@@ -14,6 +14,11 @@ void sol1() {
   cout << "Seed: " << seed << "\n";
   cout << "Gen:  " << gen() << "\n";
 
+  uniform_int_distribution<int> door(0, 2);
+  cout << "Door: " << door(gen) << "\n";
+
+  int prizeDoor = door(gen);
+  int initialDoor = door(gen);
 
   // Algorithm
 }
