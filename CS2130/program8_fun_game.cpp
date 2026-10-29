@@ -13,6 +13,9 @@ void sol1() {
   
   cout << "Seed: " << seed << "\n";
   cout << "Gen:  " << gen() << "\n";
+
+
+  // Algorithm
 }
 
 int main() {
