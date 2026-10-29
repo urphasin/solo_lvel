@@ -1,3 +1,8 @@
+/*
+staying = 33.33%
+switching = 66.68%
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -15,19 +20,46 @@ void sol1() {
   cout << "Gen:  " << gen() << "\n";
 
   uniform_int_distribution<int> door(0, 2);
-  cout << "Door: " << door(gen) << "\n";
-
-  int prizeDoor = door(gen);
-  int initialDoor = door(gen);
 
   // Algorithm
+  int totalGames = 100'000;
+  int stayWins = 0;
+  int switchWins = 0;
+
+  for (int i = 0; i < totalGames; i++) {
+    int prizeDoor = door(gen);
+    int initialDoor = door(gen);
+  
+    int montyDoor;
+    do {
+        montyDoor = door(gen);
+    } while (montyDoor == prizeDoor || montyDoor == initialDoor);
+
+    if (initialDoor == prizeDoor) {
+      stayWins++;
+    } else {
+      switchWins ++;
+    }
+  }
+
+  double stayRate = static_cast<double>(stayWins) / totalGames * 100.0;
+  double switchRate = static_cast<double>(switchWins) / totalGames * 100.0;
+
+  cout << fixed << setprecision(2);
+
+  cout << "Total games: " << totalGames << "\n";
+  cout << "Stay wins: " << stayWins << "\n";
+  cout << "Switch wins: " << switchWins << "\n";
+
+  cout << "Stay win rate: " << stayRate << "%\n";
+  cout << "Switch win rate: " << switchRate << "%\n";
 }
 
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   
-  int t = 5;
+  int t = 1;
   // cin >> t;
   while(t--){
     sol1();
