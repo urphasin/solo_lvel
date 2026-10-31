@@ -5,53 +5,81 @@ using namespace std;
 #define ll long long
 
 void printMatrix(vector<vector<int>> &mat) {
-  for (int i = 0; i < mat.size(); i++) {
-    for (int j = 0; j < mat[i].size(); j++) {
-      cout << mat[i][j] << setw(5) << "";
+    int x, y;
+    x = mat.size();
+    y = mat[0].size();
+    cout << "Size of Matrix is " << x << " x " << y << "\n";
+    for (int i = 0; i < mat.size(); i++) {
+        for (int j = 0; j < mat[i].size(); j++) {
+            cout << mat[i][j] << setw(5) << "";
+        }
+        cout << "\n";
     }
-    cout << endl;
-  }
+    cout << "\n\n";
 }
 
 void sol1() {
-  int M, N;
-  cout << "Create matrix dimenesion: " << "\n";
-  cout << "Enter M and N spearated by space: ";
-  cin >> M >> N;
-  cout << endl;
+    int M, N;
+    int A, B;
+    cout << "Create 2 matrices: " << "\n";
 
-  while(!(2 <= M && M <= 3) || !(2 <= N && N <= 3)) {
-    cout << "M and N need to be between 2 and 3: ";
+    // Create matrix M x N
+    cout << "Enter M and N spearated by space: ";
     cin >> M >> N;
     cout << endl;
-  }
 
-  vector<vector<int>> mat(M, vector<int>(N));
-  // Create a matrix of M x N
-  for(int i = 0; i < M; i++) {
-    for (int j = 0; j < N; j++) {
-      mat[i][j] = 2 * (i + j) + (j * (i + 3)); 
+    while (!(2 <= M && M <= 3) || !(2 <= N && N <= 3)) {
+        cout << "M and N need to be between 2 and 3: ";
+        cin >> M >> N;
+        cout << endl;
     }
-  }
 
+    // create the vector for mat1
+    vector<vector<int>> mat1(M, vector<int>(N));
 
-  
-  // Print matrix
-  // printMatrix(mat);
+    for (int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            mat1[i][j] = 2 * (i + j) + (j * (i + 3));
+        }
+    }
+
+    // Create matrix A x B 
+    cout << "Enter A and B spearated by space: ";
+    cin >> A >> B;
+    cout << endl;
+
+    while (!(2 <= A && A <= 3) || !(2 <= B && B <= 3)) {
+        cout << "A and B need to be between 2 and 3: ";
+        cin >> A >> B;
+        cout << endl;
+    }
+
+    // Create the vector for mat2
+    vector<vector<int>> mat2(A, vector<int>(B));
+
+    for (int i = 0; i < A; i++) {
+        for (int j = 0; j < B; j++) {
+            mat2[i][j] = 3 * (i + j) + (j * (i - 2));
+        }
+    }
+
+    // Print matrix
+    printMatrix(mat1);
+    printMatrix(mat2);
 }
 
 int main() {
-  ios::sync_with_stdio(false);
-  // cin.tie(nullptr);
-  
-  int t = 1;
-  // cin >> t;
-  while(t--){
-    sol1();
-  }
+    ios::sync_with_stdio(false);
+    // cin.tie(nullptr);
 
-  cout << endl;
-  return 0;
+    int t = 1;
+    // cin >> t;
+    while (t--) {
+        sol1();
+    }
+
+    cout << endl;
+    return 0;
 }
 
 // g++ program9_matrix.cpp -o ans && ./ans && rm -rf ./ans 
