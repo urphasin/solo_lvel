@@ -18,6 +18,51 @@ void printMatrix(vector<vector<int>> &mat) {
     cout << "\n\n";
 }
 
+void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    int M, N, A, B;
+    M = mat1.size();
+    N = mat1[0].size();
+    A = mat2.size();
+    B = mat2[0].size();
+
+    if(N != A) {
+        cout << "Invalid matrix muliplication parameters" << "\n";
+        return;
+    }
+
+    // Create vector of size M x B
+    vector<vector<int>> res(M, vector<int>(B));
+
+    // Algorithm
+    for(int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            for (int k = 0; k < A; k++) {
+                res[][] = mat1[i][j] + mat2[]
+            }
+        }
+    }
+
+}
+
+void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    int M, N, A, B;
+    M = mat1.size();
+    N = mat1[0].size();
+    A = mat2.size();
+    B = mat2[0].size();
+
+    if(M != A && N != B) {
+        cout << "Invalid matrix addition parameter" << "\n";
+        return;
+    }
+
+    // Create vector of size M x N or A x B
+    vector<vector<int>> res(M, vector<int>(N));
+
+    // Algorithm
+
+}
+
 void sol1() {
     int M, N;
     int A, B;
@@ -67,6 +112,17 @@ void sol1() {
     printMatrix(mat1);
     printMatrix(mat2);
 }
+
+void sol2(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    int M, N, A, B;
+    M = mat1.size();
+    N = mat1[0].size();
+    A = mat2.size();
+    B = mat2[0].size();
+
+    
+}
+
 
 int main() {
     ios::sync_with_stdio(false);
