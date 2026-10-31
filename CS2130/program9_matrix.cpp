@@ -8,7 +8,7 @@ void printMatrix(vector<vector<int>> &mat) {
     int x, y;
     x = mat.size();
     y = mat[0].size();
-    cout << "Size of Matrix is " << x << " x " << y << "\n";
+    cout << "Size of Matrix is: " << x << " x " << y << "\n";
     for (int i = 0; i < mat.size(); i++) {
         for (int j = 0; j < mat[i].size(); j++) {
             cout << mat[i][j] << setw(5) << "";
