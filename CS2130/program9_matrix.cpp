@@ -179,7 +179,7 @@ void sol1() {
     case 1:
         addMatrices(M, N);
         break;
-    case2:
+    case 2:
         multiplyMatrices(M, N);
         break;
     default:
@@ -195,7 +195,7 @@ int main() {
     int t = 1;
     // cin >> t;
     while (t--) {
-
+        sol1();
     }
 
     cout << endl;
