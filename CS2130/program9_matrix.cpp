@@ -61,7 +61,7 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     A = mat2.size();
     B = mat2[0].size();
 
-    if (M != A && N != B) {
+    if (M != A || N != B) {
         cout << "Invalid matrix addition parameter" << "\n";
         return;
     }
