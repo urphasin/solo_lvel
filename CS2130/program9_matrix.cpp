@@ -19,6 +19,7 @@ void printMatrix(vector<vector<int>> &mat) {
 }
 
 void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    cout << "\x1b[1;94m" << "Matrix Multiplication" << "\x1b[0m" << "\n";
     cout << "Mat1 : ";printMatrix(mat1);
     cout << "Mat2 : ";printMatrix(mat2);
 
@@ -52,6 +53,7 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
 }
 
 void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    cout << "\x1b[1;93m" << "Matrix Addition" << "\x1b[0m" << "\n";
     cout << "Mat1 : ";printMatrix(mat1);
     cout << "Mat2 : ";printMatrix(mat2);
     
