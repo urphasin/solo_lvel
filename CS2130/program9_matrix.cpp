@@ -19,8 +19,8 @@ void printMatrix(vector<vector<int>> &mat) {
 }
 
 void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
-    printMatrix(mat1);
-    printMatrix(mat2);
+    cout << "Mat1 : ";printMatrix(mat1);
+    cout << "Mat2 : ";printMatrix(mat2);
 
     int M, N, A, B;
     M = mat1.size();
@@ -47,7 +47,7 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
         }
     }
 
-    cout << "Result is: " << "\n";
+    cout << "Mat 1 x Mat 2 result is: " << "\n";
     printMatrix(res);
 }
 
