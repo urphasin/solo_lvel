@@ -19,6 +19,9 @@ void printMatrix(vector<vector<int>> &mat) {
 }
 
 void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    printMatrix(mat1);
+    printMatrix(mat2);
+
     int M, N, A, B;
     M = mat1.size();
     N = mat1[0].size();
@@ -31,17 +34,19 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     }
 
     // Create vector of size M x B
-    vector<vector<int>> res(M, vector<int>(B));
+    vector<vector<int>> res(M, vector<int>(B, 0));
 
     // Algorithm
     for(int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-            for (int k = 0; k < A; k++) {
-                res[][] = mat1[i][j] + mat2[]
+        for (int j = 0; j < B; j++) {
+            for (int k = 0; k < N; k++) {
+                res[i][j] += mat1[i][k] + mat2[k][j];
             }
         }
     }
 
+    cout << "Result is: " << "\n";
+    printMatrix(res);
 }
 
 void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
@@ -111,16 +116,9 @@ void sol1() {
     // Print matrix
     printMatrix(mat1);
     printMatrix(mat2);
-}
-
-void sol2(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
-    int M, N, A, B;
-    M = mat1.size();
-    N = mat1[0].size();
-    A = mat2.size();
-    B = mat2[0].size();
-
     
+    // Run algorithm
+    multiplyMatrices
 }
 
 
@@ -131,7 +129,18 @@ int main() {
     int t = 1;
     // cin >> t;
     while (t--) {
-        sol1();
+        vector<vector<int>> mat1 {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        vector<vector<int>> mat2 {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+        };
+
+
     }
 
     cout << endl;
