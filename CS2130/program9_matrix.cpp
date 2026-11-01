@@ -76,7 +76,7 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
         }
     }
 
-    cout << "Mat 1 x Mat 2 result is: " << "\n";
+    cout << "Mat 1 + Mat 2 result is: " << "\n";
     printMatrix(res);
 }
 
@@ -140,17 +140,28 @@ int main() {
     int t = 1;
     // cin >> t;
     while (t--) {
-        vector<vector<int>> mat1 {
-            {1, 2, 3},
-            {4, 5, 6}
+        vector<vector<int>> mat1{
+            { 1, 2, 3 },
+            { 4, 5, 6 }
         };
 
-        vector<vector<int>> mat2 {
-            {7, 8},
-            {9, 10},
-            {11, 12}
+        vector<vector<int>> mat2{
+            { 7, 8 },
+            { 9, 10 },
+            { 11, 12 }
         };
 
+        vector<vector<int>> mat3{
+           { 1, 2, 3 },
+           { 4, 5, 6 }
+        };
+
+        vector<vector<int>> mat4{
+            {7, 8, 9},
+            {10, 11, 12}
+        };
+
+        addMatrices(mat3, mat4);
         multiplyMatrices(mat1, mat2);
     }
 
