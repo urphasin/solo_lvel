@@ -118,7 +118,6 @@ void sol1() {
     printMatrix(mat2);
     
     // Run algorithm
-    multiplyMatrices
 }
 
 
@@ -140,7 +139,7 @@ int main() {
             {11, 12}
         };
 
-
+        multiplyMatrices(mat1, mat2);
     }
 
     cout << endl;
