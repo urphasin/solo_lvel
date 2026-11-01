@@ -52,6 +52,9 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
 }
 
 void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
+    cout << "Mat1 : ";printMatrix(mat1);
+    cout << "Mat2 : ";printMatrix(mat2);
+    
     int M, N, A, B;
     M = mat1.size();
     N = mat1[0].size();
@@ -67,7 +70,14 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     vector<vector<int>> res(M, vector<int>(N));
 
     // Algorithm
+    for(int i = 0; i < M; i++) {
+        for (int j = 0; j < N; j++) {
+            res[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
 
+    cout << "Mat 1 x Mat 2 result is: " << "\n";
+    printMatrix(res);
 }
 
 void sol1() {
