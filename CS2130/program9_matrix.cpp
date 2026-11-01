@@ -36,8 +36,6 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
 
     // Create vector of size M x B
     vector<vector<int>> res(M, vector<int>(B, 0));
-    cout << "Initial res: " << "\n";
-    printMatrix(res);
 
     // Algorithm
     for (int i = 0; i < M; i++) {
