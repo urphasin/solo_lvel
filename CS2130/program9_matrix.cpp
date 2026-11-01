@@ -29,7 +29,7 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     A = mat2.size();
     B = mat2[0].size();
 
-    if(N != A) {
+    if (N != A) {
         cout << "Invalid matrix muliplication parameters" << "\n";
         return;
     }
@@ -40,7 +40,7 @@ void multiplyMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     printMatrix(res);
 
     // Algorithm
-    for(int i = 0; i < M; i++) {
+    for (int i = 0; i < M; i++) {
         for (int j = 0; j < B; j++) {
             for (int k = 0; k < N; k++) {
                 res[i][j] += mat1[i][k] * mat2[k][j];
@@ -56,14 +56,14 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     cout << "\x1b[1;93m" << "Matrix Addition" << "\x1b[0m" << "\n";
     cout << "Mat1 : ";printMatrix(mat1);
     cout << "Mat2 : ";printMatrix(mat2);
-    
+
     int M, N, A, B;
     M = mat1.size();
     N = mat1[0].size();
     A = mat2.size();
     B = mat2[0].size();
 
-    if(M != A && N != B) {
+    if (M != A && N != B) {
         cout << "Invalid matrix addition parameter" << "\n";
         return;
     }
@@ -72,7 +72,7 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
     vector<vector<int>> res(M, vector<int>(N));
 
     // Algorithm
-    for(int i = 0; i < M; i++) {
+    for (int i = 0; i < M; i++) {
         for (int j = 0; j < N; j++) {
             res[i][j] = mat1[i][j] + mat2[i][j];
         }
@@ -83,55 +83,108 @@ void addMatrices(vector<vector<int>> &mat1, vector<vector<int>> &mat2) {
 }
 
 void sol1() {
-    int M, N;
-    int A, B;
-    cout << "Create 2 matrices: " << "\n";
+    vector<vector<int>> mat1{
+    { 1, 2, 3 },
+    { 4, 5, 6 }
+    };
 
-    // Create matrix M x N
-    cout << "Enter M and N spearated by space: ";
-    cin >> M >> N;
-    cout << endl;
+    vector<vector<int>> mat2{
+        { 7, 8 },
+        { 9, 10 },
+        { 11, 12 }
+    };
 
-    while (!(2 <= M && M <= 3) || !(2 <= N && N <= 3)) {
-        cout << "M and N need to be between 2 and 3: ";
-        cin >> M >> N;
-        cout << endl;
+    vector<vector<int>> mat3{
+        { 1, 0 },
+        { -1, 1 }
+    };
+
+    vector<vector<int>> mat4{
+        { 1, 0, 0 },
+        { 0, 1, 0 },
+        { 0, 0, 1 }
+    };
+
+    vector<vector<int>> M;
+    vector<vector<int>> N;
+
+
+    int mChoice;
+    cout << "Select matrix M:\n";
+    cout << "1. Matrix mat1 (2x3)\n";
+    cout << "2. Matrix mat2 (3x2)\n";
+    cout << "3. Matrix mat3 (2x2)\n";
+    cout << "4. Matrix mat4 (3x3)\n";
+
+    cout << "Enter choice: ";
+    cin >> mChoice;
+
+    switch (mChoice) {
+    case 1:
+        M = mat1;
+        break;
+    case 2:
+        M = mat2;
+        break;
+    case 3:
+        M = mat3;
+        break;
+    case 4:
+        M = mat4;
+        break;
+    default:
+        cout << "Invalid input" << "\n";
     }
 
-    // create the vector for mat1
-    vector<vector<int>> mat1(M, vector<int>(N));
 
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < N; j++) {
-            mat1[i][j] = 2 * (i + j) + (j * (i + 3));
-        }
+
+
+    int nChoice;
+    cout << "\nSelect matrix N:\n";
+    cout << "1. Matrix A (2x2)\n";
+    cout << "2. Matrix B (2x3)\n";
+    cout << "3. Matrix C (3x2)\n";
+    cout << "4. Matrix D (3x3)\n";
+
+    cout << "Enter choice: ";
+    cin >> nChoice;
+
+    switch (nChoice) {
+    case 1:
+        N = mat1;
+        break;
+    case 2:
+        N = mat2;
+        break;
+    case 3:
+        N = mat3;
+        break;
+    case 4:
+        N = mat4;
+        break;
+    default:
+        cout << "Invalid input" << "\n";
     }
 
-    // Create matrix A x B 
-    cout << "Enter A and B spearated by space: ";
-    cin >> A >> B;
-    cout << endl;
+    int operation;
+    cout << "\nSelect operation:\n";
+    cout << "1. Addition\n";
+    cout << "2. Multiplication\n";
 
-    while (!(2 <= A && A <= 3) || !(2 <= B && B <= 3)) {
-        cout << "A and B need to be between 2 and 3: ";
-        cin >> A >> B;
-        cout << endl;
+    cout << "Enter choice: ";
+    cin >> operation;
+    cout << "\n";
+
+    switch (operation) {
+    case 1:
+        addMatrices(M, N);
+        break;
+    case2:
+        multiplyMatrices(M, N);
+        break;
+    default:
+        cout << "Invalid input" << "\n";
     }
-
-    // Create the vector for mat2
-    vector<vector<int>> mat2(A, vector<int>(B));
-
-    for (int i = 0; i < A; i++) {
-        for (int j = 0; j < B; j++) {
-            mat2[i][j] = 3 * (i + j) + (j * (i - 2));
-        }
-    }
-
-    // Print matrix
-    printMatrix(mat1);
-    printMatrix(mat2);
-    
-    // Run algorithm
 }
 
 
@@ -142,29 +195,7 @@ int main() {
     int t = 1;
     // cin >> t;
     while (t--) {
-        vector<vector<int>> mat1{
-            { 1, 2, 3 },
-            { 4, 5, 6 }
-        };
 
-        vector<vector<int>> mat2{
-            { 7, 8 },
-            { 9, 10 },
-            { 11, 12 }
-        };
-
-        vector<vector<int>> mat3{
-           { 1, 2, 3 },
-           { 4, 5, 6 }
-        };
-
-        vector<vector<int>> mat4{
-            {7, 8, 9},
-            {10, 11, 12}
-        };
-
-        addMatrices(mat3, mat4);
-        multiplyMatrices(mat1, mat2);
     }
 
     cout << endl;
