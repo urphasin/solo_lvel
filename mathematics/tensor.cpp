@@ -12,3 +12,5 @@ void print1DTensor(vector<T> tensor) {
 int main() {
   print1DTensor(vector<int> {1,2,3, 4, 5, 21});
 }
+
+// g++ tensor.cpp -o ans && ./ans && rm -rf ./ans 
