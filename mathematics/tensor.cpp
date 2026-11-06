@@ -9,4 +9,6 @@ void print1DTensor(vector<T> tensor) {
   }
 }
 
-int main() {}
+int main() {
+  print1DTensor(vector<int> {1,2,3, 4, 5, 21});
+}
