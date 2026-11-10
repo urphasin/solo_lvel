@@ -35,7 +35,10 @@ int main() {
     cin >> n;
     cout << endl;
 
-    if(n != 1 || n != 2) { continue; }
+    if(n != 1 && n != 2) { 
+      cout << "Invalid input. Please try again. \n";
+      continue; 
+    }
     if(n == 2) { break; }
 
     cout << "enter ordered pair space separated: ";
