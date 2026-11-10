@@ -16,5 +16,17 @@ Range = {1, 2, 5}
 */
 
 int main() {
+  set<pair<int, int>> relation;
+  set<int>            domain;
+  set<int>            range;
 
+  int n; // input test case;
+  cout << "Enter the number of case: ";
+  cin >> n;
+
+  while(n--) {
+    int x, y;
+    
+  }
+  
 }
