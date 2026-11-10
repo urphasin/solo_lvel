@@ -22,6 +22,14 @@ void print_set_pair(set<pair<T, V>> relation) {
   }
 }
 
+template <typename T>
+void print_set_T(set<T> s) {
+  cout << "{ ";
+  for (auto e : s) {
+    cout << e << ", ";
+  }
+  cout << " }\n";
+}
 
 int main() {
   set<pair<int, int>> relation;
@@ -46,6 +54,8 @@ int main() {
     cin >> x >> y;
 
     relation.insert({x, y});
+    domain.insert(x);
+    range.insert(y);
   }
 
   print_set_pair(relation);
