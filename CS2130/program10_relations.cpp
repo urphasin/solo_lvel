@@ -48,3 +48,5 @@ int main() {
   print_set_pair(relation);
   
 }
+
+// g++ program10_relations.cpp -o ans && ./ans && rm -rf ./ans 
