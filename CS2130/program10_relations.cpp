@@ -16,10 +16,11 @@ Range = {1, 2, 5}
 */
 template <typename T, typename V>
 void print_set_pair(set<pair<T, V>> relation) {
-  cout << "\n";
+  cout << "{ ";
   for (auto [domain, range] : relation) {
-    cout << "Pair: (" << domain << ", " << range << ") \n";
+    cout << "(" << domain << ", " << range << "), ";
   }
+  cout << " }" << endl;
 }
 
 template <typename T>
@@ -28,7 +29,7 @@ void print_set_T(set<T> s) {
   for (auto e : s) {
     cout << e << ", ";
   }
-  cout << " }\n";
+  cout << " }" << endl;
 }
 
 int main() {
@@ -58,8 +59,11 @@ int main() {
     range.insert(y);
   }
 
-  print_set_pair(relation);
-  
+  cout << "Relation: "; print_set_pair(relation);
+  cout << "Domain: "; print_set_T(domain);
+  cout << "Range: "; print_set_T(range);
+
+  return 0;
 }
 
 // g++ program10_relations.cpp -o ans && ./ans && rm -rf ./ans 
