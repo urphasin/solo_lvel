@@ -21,12 +21,18 @@ int main() {
   set<int>            range;
 
   int n; // input test case;
-  cout << "Enter the number of case: ";
+  cout << "enter another input: 1(yes), 2(no)";
   cin >> n;
 
-  while(n--) {
+  while( n != 2 ) {
+    cout << "enter ordered pair space separated: " << "\n";
     int x, y;
+    cin >> x >> y;
+
+    relation.insert({x, y});
     
+    cout << "enter another input: 1(yes), 2(no)";
+    cin >> n;
   }
   
 }
