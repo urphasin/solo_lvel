@@ -31,7 +31,7 @@ int main() {
   
   int n;
   while(true) {
-    cout << "enter input: 1(yes), 2(no): ";
+    cout << "enter a pair : 1(yes), 2(no): ";
     cin >> n;
     cout << endl;
 
