@@ -83,7 +83,7 @@ int main() {
   vector<vector<vector<int>>> MatrixContainer {matA, matB, matC, matD};
 
   int i = 1;
-  for (auto mat : MatrixContainer) {
+  for (const auto& mat : MatrixContainer) {
     cout << "Matrix " << i << ":" << endl;
     print4x4Matix(mat);
     i++;
