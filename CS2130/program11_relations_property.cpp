@@ -24,14 +24,17 @@ bool isIrreflexive(const vector<vector<int>>& mat) {
 
 bool isSymmetric(const vector<vector<int>>& mat) {
   
+  return true;
 }
 
 bool isAsymmetric(const vector<vector<int>>& mat) {
-  
+  return true;
 }
 
 bool isAntisymmetric(const vector<vector<int>>& mat) {
 
+
+  return true;
 }
 
 
@@ -72,7 +75,7 @@ int main() {
   isReflexive(matD) ? cout << "reflexive\n" : cout << "not reflexive\n";
 
 
-  
+
   cout << endl;
   return 0;
   
