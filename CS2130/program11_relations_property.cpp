@@ -86,6 +86,7 @@ int main() {
   for (auto mat : MatrixContainer) {
     cout << "Matrix " << i << ":" << endl;
     print4x4Matix(mat);
+    i++;
 
     if (!isReflexive(mat) &&
       !isIrreflexive(mat) &&
