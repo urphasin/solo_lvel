@@ -117,9 +117,6 @@ int main() {
     cout << "\n\n";
   }
   
-  isReflexive(matD) ? cout << "reflexive\n" : cout << "not reflexive\n";
-
-
 
   cout << endl;
   return 0;
