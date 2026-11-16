@@ -112,9 +112,15 @@ int main() {
   { 0, 0, 0, 1 },
   { 0, 0, 0, 0 }
   };
-
   
-  vector<vector<vector<int>>> MatrixContainer{ matA, matB, matC, matD, matE, matF };
+  vector<vector<int>> matG = {
+  { 1, 0, 0, 0 },
+  { 0, 1, 0, 0 },
+  { 0, 0, 1, 0 },
+  { 0, 0, 0, 1 }
+  };
+  
+  vector<vector<vector<int>>> MatrixContainer{ matA, matB, matC, matD, matE, matF, matG };
 
   int i = 1;
   for (const auto &mat : MatrixContainer) {
