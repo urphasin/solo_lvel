@@ -129,6 +129,7 @@ int main() {
       !isAntisymmetric(mat)
       ) {
       cout << "None" << endl;
+      cout << "\n\n";
       continue;
     }
 
