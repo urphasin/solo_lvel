@@ -134,7 +134,7 @@ int main() {
       !isAsymmetric(mat) &&
       !isAntisymmetric(mat)
       ) {
-      cout << "None" << endl;
+      cout << "None";
       cout << "\n\n";
       continue;
     }
